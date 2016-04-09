@@ -19,7 +19,8 @@ class TicTacToe(object):
         self.grid.mark(pos, 'x')
 
     def computer_pick(self):
-        pos = random.sample(self.grid.empty_slots,1)[0]
+        #pos = random.sample(self.grid.empty_slots,1)[0]
+        pos = random.choice(self.grid.empty_slots)
         self.grid.mark(pos, 'o')
         print 'AI,marked on position {}'.format(pos)
 
